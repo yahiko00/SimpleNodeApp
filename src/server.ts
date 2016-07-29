@@ -14,7 +14,7 @@ class HttpServer {
     onRequest(request: http.ServerRequest, response: http.ServerResponse) {
         console.log('New request: ' + request.url);
 
-        fs.readFile('./index.html', (err: any, data: Buffer) => {
+        fs.readFile('./index.html', (err: Error, data: Buffer) => {
             if (err) {
                 throw err;
             }
